@@ -13,6 +13,18 @@ export interface Theme {
   statusBg: string;
 }
 
+export interface SymbolConfig {
+  icon: string;
+  library: 'Feather' | 'MaterialCommunityIcons' | 'FontAwesome5' | 'Ionicons';
+  size: number;
+}
+
+export interface SymbolSet {
+  name: string;
+  player1: SymbolConfig;
+  player2: SymbolConfig;
+}
+
 export interface WinnerResult {
   winner: 'X' | 'O';
   line: number[];
@@ -25,4 +37,6 @@ export interface GameState {
   isDraw: boolean;
   winningLine: number[];
   isDarkTheme: boolean;
+  selectedTheme: string;
+  selectedSymbols: string;
 }

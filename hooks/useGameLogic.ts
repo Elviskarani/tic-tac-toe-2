@@ -8,8 +8,10 @@ interface UseGameLogicReturn {
   winner: 'X' | 'O' | null;
   isDraw: boolean;
   winningLine: number[];
-  isDarkTheme: boolean;
-  setIsDarkTheme: (value: boolean) => void;
+  selectedTheme: string;
+  selectedSymbols: string;
+  setSelectedTheme: (theme: string) => void;
+  setSelectedSymbols: (symbols: string) => void;
   handlePress: (index: number) => void;
   resetGame: () => void;
   getStatusText: () => string;
@@ -21,7 +23,8 @@ export default function useGameLogic(): UseGameLogicReturn {
   const [winner, setWinner] = useState<'X' | 'O' | null>(null);
   const [isDraw, setIsDraw] = useState<boolean>(false);
   const [winningLine, setWinningLine] = useState<number[]>([]);
-  const [isDarkTheme, setIsDarkTheme] = useState<boolean>(false);
+  const [selectedTheme, setSelectedTheme] = useState<string>('notebook');
+  const [selectedSymbols, setSelectedSymbols] = useState<string>('classic');
 
   useEffect(() => {
     const result = calculateWinner(board);
@@ -69,8 +72,10 @@ export default function useGameLogic(): UseGameLogicReturn {
     winner,
     isDraw,
     winningLine,
-    isDarkTheme,
-    setIsDarkTheme,
+    selectedTheme,
+    selectedSymbols,
+    setSelectedTheme,
+    setSelectedSymbols,
     handlePress,
     resetGame,
     getStatusText,

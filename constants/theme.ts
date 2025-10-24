@@ -1,6 +1,6 @@
-import { Theme } from '../types';
+import { Theme, SymbolSet } from '../types';
 
-export const THEMES: Record<'notebook' | 'blueprint', Theme> = {
+export const THEMES: Record<string, Theme> = {
   notebook: {
     background: '#FDF6E3',
     paper: '#FFFEF7',
@@ -24,5 +24,130 @@ export const THEMES: Record<'notebook' | 'blueprint', Theme> = {
     buttonText: '#ECF0F1',
     winnerBg: '#16A085',
     statusBg: '#2C3E50',
+  },
+  neon: {
+    background: '#0A0E27',
+    paper: '#1A1E3F',
+    text: '#00FFF7',
+    gridLine: '#FF006E',
+    xColor: '#FF006E',
+    oColor: '#00FFF7',
+    buttonBg: '#2A2E5F',
+    buttonText: '#00FFF7',
+    winnerBg: '#8338EC',
+    statusBg: '#1F2347',
+  },
+  forest: {
+    background: '#2D5016',
+    paper: '#3D6B21',
+    text: '#F0FFF0',
+    gridLine: '#8FBC8F',
+    xColor: '#FFD700',
+    oColor: '#FFA07A',
+    buttonBg: '#556B2F',
+    buttonText: '#F0FFF0',
+    winnerBg: '#9ACD32',
+    statusBg: '#3D5A2C',
+  },
+  candy: {
+    background: '#FFE5EC',
+    paper: '#FFF0F5',
+    text: '#8B008B',
+    gridLine: '#DDA0DD',
+    xColor: '#FF1493',
+    oColor: '#FF69B4',
+    buttonBg: '#FFB6C1',
+    buttonText: '#8B008B',
+    winnerBg: '#FF69B4',
+    statusBg: '#FFE4E1',
+  },
+  ocean: {
+    background: '#001F3F',
+    paper: '#003366',
+    text: '#E0FFFF',
+    gridLine: '#4682B4',
+    xColor: '#00CED1',
+    oColor: '#87CEEB',
+    buttonBg: '#003D5C',
+    buttonText: '#E0FFFF',
+    winnerBg: '#20B2AA',
+    statusBg: '#002B4D',
+  },
+  sunset: {
+    background: '#1A1423',
+    paper: '#2D2433',
+    text: '#FFE5B4',
+    gridLine: '#FF6B9D',
+    xColor: '#FF6B35',
+    oColor: '#FFC75F',
+    buttonBg: '#4A3F5C',
+    buttonText: '#FFE5B4',
+    winnerBg: '#C73E1D',
+    statusBg: '#2A2133',
+  },
+  retro: {
+    background: '#FFF8DC',
+    paper: '#FAEBD7',
+    text: '#654321',
+    gridLine: '#8B4513',
+    xColor: '#DC143C',
+    oColor: '#4169E1',
+    buttonBg: '#DEB887',
+    buttonText: '#654321',
+    winnerBg: '#DAA520',
+    statusBg: '#F5DEB3',
+  },
+};
+
+export const SYMBOL_SETS: Record<string, SymbolSet> = {
+  classic: {
+    name: 'Classic',
+    player1: { icon: 'x', library: 'Feather', size: 60 },
+    player2: { icon: 'circle', library: 'Feather', size: 56 },
+  },
+  animals: {
+    name: 'Animals',
+    player1: { icon: 'cat', library: 'MaterialCommunityIcons', size: 50 },
+    player2: { icon: 'dog', library: 'MaterialCommunityIcons', size: 50 },
+  },
+  shapes: {
+    name: 'Shapes',
+    player1: { icon: 'square', library: 'Feather', size: 50 },
+    player2: { icon: 'triangle', library: 'Feather', size: 50 },
+  },
+  hands: {
+    name: 'Hands',
+    player1: { icon: 'hand-rock', library: 'FontAwesome5', size: 45 },
+    player2: { icon: 'hand-paper', library: 'FontAwesome5', size: 45 },
+  },
+  weather: {
+    name: 'Weather',
+    player1: { icon: 'sunny', library: 'Ionicons', size: 50 },
+    player2: { icon: 'moon', library: 'Ionicons', size: 50 },
+  },
+  food: {
+    name: 'Food',
+    player1: { icon: 'pizza', library: 'MaterialCommunityIcons', size: 50 },
+    player2: { icon: 'ice-cream', library: 'MaterialCommunityIcons', size: 50 },
+  },
+  sports: {
+    name: 'Sports',
+    player1: { icon: 'basketball', library: 'MaterialCommunityIcons', size: 50 },
+    player2: { icon: 'soccer', library: 'MaterialCommunityIcons', size: 50 },
+  },
+  flowers: {
+    name: 'Flowers',
+    player1: { icon: 'flower', library: 'MaterialCommunityIcons', size: 50 },
+    player2: { icon: 'flower-tulip', library: 'MaterialCommunityIcons', size: 50 },
+  },
+  emojis: {
+    name: 'Emojis',
+    player1: { icon: 'emoticon-happy', library: 'MaterialCommunityIcons', size: 50 },
+    player2: { icon: 'emoticon-cool', library: 'MaterialCommunityIcons', size: 50 },
+  },
+  space: {
+    name: 'Space',
+    player1: { icon: 'rocket', library: 'MaterialCommunityIcons', size: 50 },
+    player2: { icon: 'alien', library: 'MaterialCommunityIcons', size: 50 },
   },
 };

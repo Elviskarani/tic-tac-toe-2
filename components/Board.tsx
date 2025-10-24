@@ -1,16 +1,18 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import Square from './Square';
-import { Player, Theme } from '../types';
+import { Player, Theme, SymbolConfig } from '../types';
 
 interface BoardProps {
   board: Player[];
   winningLine: number[];
   onSquarePress: (index: number) => void;
   theme: Theme;
+  xSymbol: SymbolConfig;
+  oSymbol: SymbolConfig;
 }
 
-export default function Board({ board, winningLine, onSquarePress, theme }: BoardProps) {
+export default function Board({ board, winningLine, onSquarePress, theme, xSymbol, oSymbol }: BoardProps) {
   const renderSquare = (index: number) => {
     return (
       <Square
@@ -19,6 +21,8 @@ export default function Board({ board, winningLine, onSquarePress, theme }: Boar
         isWinning={winningLine.includes(index)}
         onPress={() => onSquarePress(index)}
         theme={theme}
+        xSymbol={xSymbol}
+        oSymbol={oSymbol}
       />
     );
   };
